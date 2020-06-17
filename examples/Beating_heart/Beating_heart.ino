@@ -46,14 +46,14 @@ void setup ()
   myDisplay.begin ();
   myDisplay.setIntensity (0);
 
-  myDisplay.sendToAll(1, heart[0]);
-  myDisplay.sendToAll(2, heart[1]);
-  myDisplay.sendToAll(3, heart[2]);
-  myDisplay.sendToAll(4, heart[3]);
-  myDisplay.sendToAll(5, heart[4]);
-  myDisplay.sendToAll(6, heart[5]);
-  myDisplay.sendToAll(7, heart[6]);
-  myDisplay.sendToAll(8, heart[7]);
+  myDisplay.writeReg(1, heart[0]);
+  myDisplay.writeReg(2, heart[1]);
+  myDisplay.writeReg(3, heart[2]);
+  myDisplay.writeReg(4, heart[3]);
+  myDisplay.writeReg(5, heart[4]);
+  myDisplay.writeReg(6, heart[5]);
+  myDisplay.writeReg(7, heart[6]);
+  myDisplay.writeReg(8, heart[7]);
 }
 
 

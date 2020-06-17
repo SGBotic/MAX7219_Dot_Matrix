@@ -92,6 +92,16 @@ void MAX7219_Dot_Matrix::sendToAll (const byte reg, const byte data)
   digitalWrite (load_, HIGH);
   }  // end of sendToAll
 
+
+void MAX7219_Dot_Matrix::writeReg (const byte reg, const byte data)
+  {
+  digitalWrite (load_, LOW);
+  for (byte chip = 0; chip < chips_; chip++)
+    sendByte (reg, data);
+  digitalWrite (load_, HIGH);
+  }  // end of writeReg
+
+
 void MAX7219_Dot_Matrix::sendChar (const byte chip, const byte data)
   {
   // get this character from PROGMEM
