@@ -11,7 +11,7 @@ class MAX7219_Dot_Matrix
 //  bitBangedSPI * bbSPI_;
 
   void sendByte (const byte reg, const byte data);
-  void sendToAll (const byte reg, const byte data);
+  
 
   // registers
   enum {
@@ -36,7 +36,7 @@ class MAX7219_Dot_Matrix
     ~MAX7219_Dot_Matrix ();  // destructor
     void begin ();
     void end ();
-
+    void sendToAll (const byte reg, const byte data);
     void sendChar (const byte pos, const byte data);
     void send64pixels (const byte pos, const byte data [8]);
     void sendString (const char * s);
